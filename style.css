@@ -5,14 +5,16 @@ body {
   background: #f7fff9;
 }
 
+/* === About Me Section === */
 .about-me {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px 20px;
   gap: 40px;
   background-color: #e0f7fa;
+  flex-wrap: wrap;
 }
 
 .profile-pic img {
@@ -29,6 +31,7 @@ body {
 
 .bio h1 {
   color: #004d40;
+  margin-top: 0;
 }
 
 .skills {
@@ -42,6 +45,72 @@ body {
   background: #a7ffeb;
   color: #004d40;
   padding: 6px 12px;
-  margin: 5px;
+  margin: 5px 8px 5px 0;
   border-radius: 8px;
+}
+
+/* === Projects + Contact Section === */
+.projects-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  border-top: 2px solid #ccc;
+  flex-wrap: wrap;
+}
+
+.projects,
+.contact {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2,
+.contact h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.projects ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* === Hover Effects === */
+.projects ul li:hover,
+.contact a:hover {
+  color: #00796b;
+  text-decoration: underline;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .about-me,
+  .projects-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio,
+  .projects,
+  .contact {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .projects ul {
+    padding-left: 0;
+  }
 }
